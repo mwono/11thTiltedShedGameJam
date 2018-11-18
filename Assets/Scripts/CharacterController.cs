@@ -7,7 +7,6 @@ public class CharacterController : MonoBehaviour {
     private Rigidbody2D m_Rigidbody2D;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     
-    Transform playerPosition;
     bool m_FacingRight = true;
     private Vector3 m_Velocity = Vector3.zero;
 
@@ -16,7 +15,6 @@ public class CharacterController : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        playerPosition = GetComponent<Transform>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
 
