@@ -12,11 +12,6 @@ public class NonplayerEntities : MonoBehaviour {
 	void Start () {
         coll = this.gameObject.GetComponent<CircleCollider2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
