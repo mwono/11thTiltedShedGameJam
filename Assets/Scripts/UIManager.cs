@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour {
     public GameObject player;
     public GameObject cam;
     public Text scoreText;
+    public GameObject pauseMenu;
 
     int score;
 
@@ -27,7 +28,7 @@ public class UIManager : MonoBehaviour {
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
             cam.GetComponent<CameraController>().enabled = false;
-            //SHOW END GAME MENU HERE
+            showPause();
         }
         else
         {
@@ -39,5 +40,10 @@ public class UIManager : MonoBehaviour {
     {
         score += sc;
         scoreText.text = score.ToString();
+    }
+
+    public void showPause()
+    {
+        pauseMenu.SetActive(true);
     }
 }

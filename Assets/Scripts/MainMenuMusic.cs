@@ -27,6 +27,10 @@ public class MainMenuMusic : MonoBehaviour {
 
     private void OnLevelWasLoaded(int level)
     {
-        //music.time = currentMusicTime;
+        //Destroy menu music if playing game
+        if (level == 2)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
