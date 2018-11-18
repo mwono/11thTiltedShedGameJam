@@ -867,9 +867,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Jonathan Fong - Gameplay/UI Programmer\n\nNicholas Locke - Sound Designer\n\nMike
-    Outmesguine - Marketing/Music Designer\n\nMikey  Outmesguine\r - Level Designer
-    / Programmer\n\nAnton \u201CKloopy\u201D Petukhov - Head Artist\n\nMichael Wono
-    - Gameplay/UI Programmer"
+    Outmesguine - Marketing/Designer\n\nMikey  Outmesguine\r - Level Designer / Programmer\n\nAnton
+    \u201CKloopy\u201D Petukhov - Head Artist\n\nMichael Wono - Gameplay/UI Programmer"
 --- !u!222 &1877965931
 CanvasRenderer:
   m_ObjectHideFlags: 0
