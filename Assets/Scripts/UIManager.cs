@@ -7,8 +7,6 @@ public class UIManager : MonoBehaviour {
     public float timeLimit;
     public GameObject player;
     public GameObject cam;
-    public GameObject sun;
-    public GameObject rotationPoint;
 
     int score;
     Text scoreText;
@@ -35,10 +33,6 @@ public class UIManager : MonoBehaviour {
         else
         {
             timer += Time.deltaTime;
-//            var newPos = (sun.transform.position - player.transform.position).normalized * 5;
-//           newPos += player.transform.position;
-//            sun.transform.position = newPos;
-//            sun.transform.RotateAround(player.transform.position, Vector3.forward, 3f * Time.deltaTime);
         }
     }
 
