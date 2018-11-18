@@ -35,11 +35,10 @@ public class UIManager : MonoBehaviour {
         else
         {
             timer += Time.deltaTime;
-            var newPos = (sun.transform.position - rotationPoint.transform.position).normalized * 5;
-            newPos += rotationPoint.transform.position;
-            sun.transform.position = newPos;
-            Debug.Log(timer);
-            sun.transform.RotateAround(rotationPoint.transform.position, Vector3.forward, .01f);
+//            var newPos = (sun.transform.position - player.transform.position).normalized * 5;
+//           newPos += player.transform.position;
+//            sun.transform.position = newPos;
+//            sun.transform.RotateAround(player.transform.position, Vector3.forward, 3f * Time.deltaTime);
         }
     }
 

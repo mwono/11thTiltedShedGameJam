@@ -6,18 +6,21 @@ public class NonplayerEntities : MonoBehaviour {
     public GameObject UI;
     public int score;
 
-    Collider2D coll;
+    AudioSource clip;
 
-	// Use this for initialization
-	void Start () {
-        coll = this.gameObject.GetComponent<CircleCollider2D>();
-	}
+    private void Start()
+    {
+        clip = this.gameObject.GetComponent<AudioSource>();
+    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            clip.Play();
             UI.GetComponent<UIManager>().updateScore(score);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(clip.clip.length);
             this.gameObject.SetActive(false);
         }
     }

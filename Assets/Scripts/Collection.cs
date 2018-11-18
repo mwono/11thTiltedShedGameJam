@@ -5,11 +5,11 @@ using UnityEngine;
 public class Collection : MonoBehaviour {
     public GameObject UI;
 
-    Collider2D coll;
+    AudioSource vict;
 
 	// Use this for initialization
 	void Start () {
-        coll = this.gameObject.GetComponent <Collider2D>();
+        vict = this.gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +25,7 @@ public class Collection : MonoBehaviour {
             collision.GetComponent<DummyMovement>().enabled = false;
             collision.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             UI.GetComponent<UIManager>().timeLimit = float.MaxValue;
+            vict.Play();
         }
     }
 }
