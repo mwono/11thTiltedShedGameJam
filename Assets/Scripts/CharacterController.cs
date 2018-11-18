@@ -12,6 +12,7 @@ public class CharacterController : MonoBehaviour {
     private Vector3 m_Velocity = Vector3.zero;
 
     public float thrustSpeed = 16f;
+    public float thrustSpeed2 = 20f;
 
     // Use this for initialization
     void Awake () {

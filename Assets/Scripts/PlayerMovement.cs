@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
         xMove = (Input.GetAxisRaw("Horizontal")) * flySpeed;
 
-        isFlying = Input.GetKey(KeyCode.Space);
+        isFlying = Input.GetKey(KeyCode.W);
 
 	}
 
