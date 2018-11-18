@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flowers : MonoBehaviour {
+public class NonplayerEntities : MonoBehaviour {
     public GameObject UI;
     public int score;
 
