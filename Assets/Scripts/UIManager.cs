@@ -7,8 +7,10 @@ public class UIManager : MonoBehaviour {
     public float timeLimit;
     public GameObject player;
     public GameObject cam;
-    public GameObject sun;
-    public GameObject rotationPoint;
+    public GameObject pause;
+
+    public AudioSource timeUp;
+    public AudioSource close;
 
     int score;
     Text scoreText;
@@ -26,20 +28,18 @@ public class UIManager : MonoBehaviour {
 	void Update () {
         if ((timer - startTime) >= timeLimit)
         {
-            Debug.Log("FREEZE");
-            player.GetComponent<DummyMovement>().enabled = false;
+            timeUp.Play();
+            player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
-            cam.GetComponent<DummyCamFollow>().enabled = false;
-            //SHOW END GAME MENU HERE
-        }
-        else
+            cam.GetComponent<CameraController>().enabled = false;
+            showPause();
+        } else if ((timer - startTime) >= timeLimit - 20)
+            {
+                close.Play();
+            }
+            else
         {
             timer += Time.deltaTime;
-            var newPos = (sun.transform.position - rotationPoint.transform.position).normalized * 5;
-            newPos += rotationPoint.transform.position;
-            sun.transform.position = newPos;
-            Debug.Log(timer);
-            sun.transform.RotateAround(rotationPoint.transform.position, Vector3.forward, .01f);
         }
     }
 
@@ -47,5 +47,10 @@ public class UIManager : MonoBehaviour {
     {
         score += sc;
         scoreText.text = score.ToString();
+    }
+
+    public void showPause()
+    {
+        pause.SetActive(true);
     }
 }
