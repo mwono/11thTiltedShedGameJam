@@ -22,8 +22,9 @@ public class Collection : MonoBehaviour {
         if (collision.tag == "Player")
         {
             //Show Win Screen on UI here
-            collision.GetComponent<DummyMovement>().enabled = false;
+            collision.GetComponent<PlayerMovement>().enabled = false;
             collision.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            collision.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
             UI.GetComponent<UIManager>().timeLimit = float.MaxValue;
             vict.Play();
         }

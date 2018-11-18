@@ -7,9 +7,9 @@ public class UIManager : MonoBehaviour {
     public float timeLimit;
     public GameObject player;
     public GameObject cam;
+    public Text scoreText;
 
     int score;
-    Text scoreText;
 
     float timer;
     float startTime;//Note: Might not need start time?
@@ -24,10 +24,9 @@ public class UIManager : MonoBehaviour {
 	void Update () {
         if ((timer - startTime) >= timeLimit)
         {
-            Debug.Log("FREEZE");
-            player.GetComponent<DummyMovement>().enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
-            cam.GetComponent<DummyCamFollow>().enabled = false;
+            cam.GetComponent<CameraController>().enabled = false;
             //SHOW END GAME MENU HERE
         }
         else
