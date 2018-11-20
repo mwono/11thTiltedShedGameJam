@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: b7b80ee25692a264d9b24dad264eb4f1
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: eed7c5068d0c0ad4faa0b5ae4e66389f
   - enabled: 1
-    path: Assets/Scenes/DayNightAndFlowersEdited.unity
+    path: Assets/Scenes/Credits.unity
+    guid: b7b80ee25692a264d9b24dad264eb4f1
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
     guid: c495880688e92154c925a958c2f8534e
   m_configObjects: {}
